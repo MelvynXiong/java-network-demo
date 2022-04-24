@@ -1,0 +1,44 @@
+package example;
+// public class BasicType {
+
+//   public static void main(String[] args) {
+//       Person p = new Person();
+//       String[] fullname = new String[] { "Homer", "Simpson" };
+//       p.setName(fullname); // 传入fullname数组
+//       System.out.println(p.getName()); // "Homer Simpson"
+//       fullname[0] = "Bart"; // fullname数组的第一个元素修改为"Bart"
+//       System.out.println(p.getName()); // "Homer Simpson"还是"Bart Simpson"?
+//   }
+// }
+
+// class Person {
+//   private String[] name;
+
+//   public String getName() {
+//       return this.name[0] + " " + this.name[1];
+//   }
+
+//   public void setName(String[] name) {
+//       this.name = name;
+//   }
+// }
+public class BasicType {
+  public static void main(String[] args) {
+    String s1 = "hello";
+    String s2 = "hello";
+    System.out.println(s1 == s2);
+    System.out.println(s1.equals(s2));
+  }
+}
+
+class Person {
+  private String name;
+
+  public String getName() {
+    return this.name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+}

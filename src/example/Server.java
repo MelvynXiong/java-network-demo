@@ -1,3 +1,5 @@
+package example;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -11,13 +13,17 @@ import java.nio.charset.StandardCharsets;
 
 public class Server {
     public static void main(String[] args) throws IOException {
-        ServerSocket ss = new ServerSocket(6666); // 监听指定端口
-        System.out.println("server is running...");
-        for (;;) {
-            Socket sock = ss.accept();
-            System.out.println("connected from " + sock.getRemoteSocketAddress());
-            Thread t = new Handler(sock);
-            t.start();
+        // 注意到代码ss.accept()表示每当有新的客户端连接进来后，就返回一个Socket实例，这个Socket实例就是用来和刚连接的客户端进行通信的
+        // 由于客户端很多，要实现并发处理，我们就必须为每个新的Socket创建一个新线程来处理，这样，主线程的作用就是接收新的连接，每当收到新连接后，就创建一个新线程进行处理。
+        try (ServerSocket ss = new ServerSocket(6666)) { // 监听指定端口
+            System.out.println("server is running...");
+            for (;;) {
+                Socket sock = ss.accept();
+                System.out.println(
+                        "connected from " + sock.getRemoteSocketAddress() + "local is" + sock.getLocalSocketAddress());
+                Thread t = new Handler(sock);
+                t.start();
+            }
         }
     }
 }
