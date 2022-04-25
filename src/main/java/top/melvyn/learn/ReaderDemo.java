@@ -1,4 +1,4 @@
-package example;
+package main.java.top.melvyn.learn;
 
 import java.io.FileReader;
 import java.io.Reader;
@@ -18,7 +18,7 @@ public class ReaderDemo {
       while ((n = reader.read()) != -1) {
         System.out.println((char) n); // 打印char
       }
-    } catch(IOException e) {
+    } catch (IOException e) {
       System.out.println(e);
     }
   }

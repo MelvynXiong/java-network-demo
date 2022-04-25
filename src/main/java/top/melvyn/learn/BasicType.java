@@ -1,4 +1,4 @@
-package example;
+package main.java.top.melvyn.learn;
 // public class BasicType {
 
 //   public static void main(String[] args) {

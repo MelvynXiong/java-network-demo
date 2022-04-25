@@ -1,9 +1,8 @@
-package example;
+package main.java.top.melvyn.learn;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
-import java.net.SocketException;
 import java.nio.charset.StandardCharsets;
 
 public class UdpServer {

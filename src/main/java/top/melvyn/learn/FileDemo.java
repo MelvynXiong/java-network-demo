@@ -1,4 +1,4 @@
-package example;
+package main.java.top.melvyn.learn;
 
 import java.io.File;
 import java.io.IOException;
@@ -15,7 +15,7 @@ public class FileDemo {
   public static void main(String[] args) throws IOException {
     // File f = new File("./Client.java");
     // System.out.println(f.length());
-    System.out.println(Charset.defaultCharset());   
+    System.out.println(Charset.defaultCharset());
     FileDemo fd = new FileDemo();
     fd.copyFile("./Client.java", "./Target.java");
   }
@@ -23,8 +23,8 @@ public class FileDemo {
   public void copyFile(String srcPath, String target) {
     try (InputStream in = new FileInputStream(srcPath);
         OutputStream out = new FileOutputStream(target)) {
-        byte[] allBytes = in.readAllBytes();
-        out.write(allBytes);
+      byte[] allBytes = in.readAllBytes();
+      out.write(allBytes);
     } catch (FileNotFoundException e) {
       System.out.println("file not found");
     } catch (IOException e) {

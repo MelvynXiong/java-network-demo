@@ -1,4 +1,4 @@
-package example;
+package main.java.top.melvyn.learn;
 
 import java.io.IOException;
 import java.net.DatagramPacket;

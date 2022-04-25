@@ -1,4 +1,5 @@
-package example;
+package main.java.top.melvyn.learn;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;

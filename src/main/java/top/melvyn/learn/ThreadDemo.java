@@ -1,4 +1,4 @@
-package example;
+package main.java.top.melvyn.learn;
 
 public class ThreadDemo {
   public static void main(String[] args) {
